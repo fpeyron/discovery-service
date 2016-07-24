@@ -6,17 +6,15 @@ main method, or use "mvn spring-boot:run"). It will start up on port
 
 ## Resources
 
-| Path             | Description  |
-|------------------|--------------|
+| Path             | Description                                       |
+|------------------|---------------------------------------------------|
 | /dashboard       | Home page (HTML UI) listing service registrations |
-| /eureka/apps     | Raw registration metadata |
+| /eureka/apps     | Raw registration metadata                         |
 
 ## Docker Container
 
-There is a Maven goal (using a [plugin](https://github.com/spring-cloud-samples/eureka/blob/feature/docker/pom.xml#L48)) to
-generate the Docker container. The container is published in dockerhub at `samplecloud/eureka`.
+There is a Maven goal (using a [plugin](https://github.com/fpeyron/discovery-service/blob/master/pom.xml#L103)) to
+generate the Docker container. The container is published in dockerhub at `florentpeyron/discovery-service`.
 
-
-$ eval $(docker-machine env default)
 $ mvn package docker:build
-$ docker push florent.peyron/gs-spring-boot-docker
+$ docker push florentpeyron/discovery-service

@@ -15,10 +15,10 @@ spring:
     level:
       org.springframework: WARN
 
-#eureka:
-#  dashboard:
-#    path: dashboard
-#    enabled: true
+eureka:
+  dashboard:
+    path: dashboard
+    enabled: true
 #  instance:
 #    leaseRenewalIntervalInSeconds: 3
 #    metadataMap:
