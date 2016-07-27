@@ -16,5 +16,13 @@ main method, or use "mvn spring-boot:run"). It will start up on port
 There is a Maven goal (using a [plugin](https://github.com/fpeyron/discovery-service/blob/master/pom.xml#L103)) to
 generate the Docker container. The container is published in dockerhub at `florentpeyron/discovery-service`.
 
+After connect to docker machine  ( eval $(docker-machine env default) )
+
 $ mvn package docker:build
 $ docker push florentpeyron/discovery-service
+
+### Standalone command
+
+run locally instances peer1 and peer2 :
+$ java -jar -Xmx128m -Xms128m -Dspring.profiles.active=peer1 target/discovery-service-1.0-SNAPSHOT.jar
+$ java -jar -Xmx128m -Xms128m -Dspring.profiles.active=peer2 target/discovery-service-1.0-SNAPSHOT.jar
